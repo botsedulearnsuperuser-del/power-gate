@@ -1,0 +1,110 @@
+.accounts-container {
+    padding: 2rem;
+    padding-top: 4rem;
+    /* Extra top spacing as requested */
+    width: 100%;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.page-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-right: auto;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-bar-alt {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    width: 250px;
+}
+
+.filter-btn {
+    background: white;
+    border: 1px solid #A80000;
+    color: #A80000;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.action-btn-red {
+    background: #A80000;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.accounts-table-container {
+    background: #fcebeb;
+    /* Light pinkish bg from image */
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.accounts-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.accounts-table th {
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #666;
+    text-transform: uppercase;
+    padding: 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.accounts-table td {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.location-text {
+    font-weight: 700;
+    color: #444;
+}
+
+.balance-text {
+    font-weight: 700;
+    color: #444;
+}
+
+.type-badge {
+    background-color: #990000;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.8rem;
+}

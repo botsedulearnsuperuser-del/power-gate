@@ -1,0 +1,120 @@
+.payments-container {
+    padding: 2rem;
+    padding-top: 4rem;
+    /* Matching spacing */
+    width: 100%;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.page-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-right: auto;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Reusing similar button styles but keeping local scope or could refactor global later */
+.search-bar-alt {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    width: 280px;
+}
+
+.filter-btn {
+    background: white;
+    border: 1px solid #A80000;
+    color: #A80000;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.action-btn-red {
+    background: #A80000;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Table Styles */
+.payments-table-container {
+    background: #fcebeb;
+    /* Light pink */
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.payments-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.payments-table th {
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #666;
+    text-transform: uppercase;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.payments-table td {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    vertical-align: middle;
+}
+
+.account-type-text {
+    font-weight: 800;
+    color: #A80000;
+    /* Red Bold as in image */
+}
+
+.amount-text,
+.date-text,
+.balance-text {
+    font-weight: 600;
+    color: #666;
+    opacity: 0.9;
+}
+
+.status-btn {
+    background-color: #990000;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
