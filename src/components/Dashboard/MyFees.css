@@ -1,0 +1,192 @@
+.fees-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fees-highlight-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.balance-card {
+    background: linear-gradient(135deg, #A80000 0%, #7a0000 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(168, 0, 0, 0.15);
+}
+
+.balance-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.balance-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0.5rem 0;
+}
+
+.balance-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.pay-now-btn {
+    align-self: flex-start;
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    background: white;
+    color: #A80000;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.pay-now-btn:hover {
+    transform: scale(1.05);
+}
+
+.fee-summary-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.s-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.s-label {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 0.25rem;
+}
+
+.s-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.transactions-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.transactions-section h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transactions-table th {
+    text-align: left;
+    padding: 1rem;
+    background: #fdfdfd;
+    border-bottom: 1px solid #eee;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.transactions-table td {
+    padding: 1.25rem 1rem;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 0.95rem;
+}
+
+.amt-plus {
+    color: #22c55e;
+    font-weight: 700;
+}
+
+.amt-minus {
+    color: #333;
+    font-weight: 600;
+}
+
+.status-tag {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-tag.success {
+    background: #e6ffed;
+    color: #22c55e;
+}
+
+.status-tag.credit {
+    background: #ecfdf5;
+    color: #10b981;
+}
+
+@media (max-width: 1024px) {
+    .fees-highlight-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fee-summary-cards {
+        flex-direction: row;
+    }
+
+    .s-card {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .fees-container {
+        padding: 1rem;
+    }
+
+    .balance-value {
+        font-size: 2rem;
+    }
+
+    .fee-summary-cards {
+        flex-direction: column;
+    }
+
+    .transactions-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .transactions-table th,
+    .transactions-table td {
+        padding: 1rem 0.5rem;
+    }
+
+    .status-tag {
+        padding: 3px 8px;
+        font-size: 0.7rem;
+    }
+}

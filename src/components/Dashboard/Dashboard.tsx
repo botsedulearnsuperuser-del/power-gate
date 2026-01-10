@@ -11,6 +11,9 @@ import Applications from './Applications';
 import FaultsMaintenance from './FaultsMaintenance';
 import Settings from './Settings';
 import Payments from './Payments';
+import StudentProfile from './StudentProfile';
+import Academics from './Academics';
+import MyFees from './MyFees';
 
 // --- Custom Icon Components from SVGs provided by user ---
 
@@ -48,9 +51,34 @@ const FaultsIcon = ({ size = 20, className = '' }) => (
 
 const PaymentsIcon = ({ size = 20, className = '' }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" className={className}>
-        <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
-            <path d="M13.5 15H6c-1.886 0-2.828 0-3.414-.586S2 12.886 2 11V7c0-1.886 0-2.828.586-3.414S4.114 3 6 3h12c1.886 0 2.828 0 3.414.586S22 5.114 22 7v5c0 .932 0 1.398-.152 1.765a2 2 0 0 1-1.083 1.083C20.398 15 19.932 15 19 15" /><path d="M14 9a2 2 0 1 1-4 0a2 2 0 0 1 4 0m-1 8a3 3 0 0 1 3-3v-2a3 3 0 0 1 3-3v5.5c0 2.335 0 3.502-.472 4.386a4 4 0 0 1-1.642 1.642C16.002 21 14.835 21 12.5 21H12c-1.864 0-2.796 0-3.53-.305a4 4 0 0 1-2.166-2.164C6 17.796 6 16.864 6 15" />
-        </g>
+        <path fill="currentColor" d="M15 21a1.986 1.986 0 0 0 1.934-1.597l.48-2.403h2.836A1.75 1.75 0 0 0 22 15.25V9.261A2.26 2.26 0 0 0 19.75 7v-.004H14.5V5.25A2.25 2.25 0 0 0 12.25 3h-8A2.25 2.25 0 0 0 2 5.25v12.5A3.25 3.25 0 0 0 5.25 21zm2.522-12.182l-2.059 10.291a.486.486 0 0 1-.963-.095V8.496h3.11a2 2 0 0 0-.088.322M5.778 8.5a.75.75 0 1 1 0-1.5a.75.75 0 0 1 0 1.5m-.747 7.25a.75.75 0 0 1 .75-.75h5a.75.75 0 1 1 0 1.5h-5a.75.75 0 0 1-.75-.75m.75-4.75h5a.75.75 0 1 1 0 1.5h-5a.75.75 0 0 1 0-1.5" />
+    </svg>
+);
+
+const AcademicsIcon = ({ size = 20, className = '' }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" className={className}>
+        <path fill="currentColor" d="M14.217 3.5a5.17 5.17 0 0 0-4.434 0L5.489 5.512a2.25 2.25 0 0 1 .647 4.306l-1.076.461c-.534.23-.837.362-1.042.467l-.003.05L9.783 13.5a5.17 5.17 0 0 0 4.434 0l6.691-3.137c1.456-.682 1.456-3.044 0-3.726z" /><path fill="currentColor" d="M5 12.915v3.71c0 1.008.503 1.952 1.385 2.44C7.854 19.88 10.204 21 12 21s4.146-1.121 5.615-1.934c.881-.489 1.385-1.433 1.385-2.44v-3.711l-4.146 1.944a6.67 6.67 0 0 1-5.708 0zm.545-4.475a.75.75 0 0 0-.59-1.38l-1.112.477c-.557.239-1.03.441-1.4.65c-.395.222-.734.482-.989.868c-.254.386-.36.8-.408 1.25C1 10.729 1 11.243 1 11.85v2.901a.75.75 0 0 0 1.5 0v-2.862c0-.656.001-1.088.037-1.421c.034-.315.093-.47.17-.586c.075-.115.195-.231.471-.387c.292-.164.689-.335 1.292-.593z" /></svg>
+);
+
+const MyRequestsIcon = ({ size = 20, className = '' }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 32 32" className={className}>
+        <path fill="currentColor" d="M22 22v6H6V4h10V2H6a2 2 0 0 0-2 2v24a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6Z" /><path fill="currentColor" d="m29.54 5.76l-3.3-3.3a1.6 1.6 0 0 0-2.24 0l-14 14V22h5.53l14-14a1.6 1.6 0 0 0 0-2.24ZM14.7 20H12v-2.7l9.44-9.45l2.71 2.71ZM25.56 9.15l-2.71-2.71l2.27-2.27l2.71 2.71Z" /></svg>
+);
+
+const EventsIcon = ({ size = 20, className = '' }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" className={className}>
+        <path fill="currentColor" d="M21 17V8H7v9zm0-14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h1V1h2v2h8V1h2v2zm-3.47 8.06l-4.44 4.44l-2.68-2.68l1.06-1.06l1.62 1.62L16.47 10zM3 21h14v2H3a2 2 0 0 1-2-2V9h2z" /></svg>
+);
+
+const StudentProfileIcon = ({ size = 20, className = '' }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 20 24" className={className}>
+        <path fill="currentColor" d="M18.845 17.295a7.44 7.44 0 0 0-4.089-2.754l-.051-.011l-1.179 1.99a1.003 1.003 0 0 1-1 1c-.55 0-1-.45-1.525-1.774v-.032a1.25 1.25 0 1 0-2.5 0v.033v-.002c-.56 1.325-1.014 1.774-1.563 1.774a1.003 1.003 0 0 1-1-1l-1.142-1.994A7.47 7.47 0 0 0 .67 17.271l-.014.019a4.5 4.5 0 0 0-.655 2.197v.007c.005.15 0 .325 0 .5v2a2 2 0 0 0 2 2h15.5a2 2 0 0 0 2-2v-2c0-.174-.005-.35 0-.5a4.5 4.5 0 0 0-.666-2.221l.011.02zM4.5 5.29c0 2.92 1.82 7.21 5.25 7.21c3.37 0 5.25-4.29 5.25-7.21v-.065a5.25 5.25 0 1 0-10.5 0v.068z" />
+    </svg>
+);
+
+const FeesIcon = ({ size = 20, className = '' }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" y2="22" y1="10" y2="10" /><path d="M12 14v4" /><path d="M8 14v4" /><path d="M16 14v4" />
     </svg>
 );
 
@@ -68,15 +96,21 @@ const TotalAccountsIcon = ({ size = 20, className = '' }) => (
     </svg>
 );
 
-const ApprovedCustomersIcon = ({ size = 20, className = '' }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 48 48" className={className}>
-        <path fill="currentColor" fillRule="evenodd" d="M19.411.532a19 19 0 0 1 1.651-.075c.583 0 1.145.031 1.652.075a3.4 3.4 0 0 1 2.289 1.156c8.725 1.609 15.907 8.94 16.27 17.903l4.108 5.23a4.94 4.94 0 0 1 1.056 3.053c0 1.945-1.15 3.77-3.037 4.51c-.732.288-1.634.626-2.542.92l-.917 6.131a4.44 4.44 0 0 1-5.02 3.744l-2.15-.308v2.59a2 2 0 0 1-4 0v-4.897a2 2 0 0 1 2.283-1.98l4.435.636a.44.44 0 0 0 .496-.376l1.105-7.388a2 2 0 0 1 1.463-1.637c1.068-.284 2.347-.75 3.384-1.158c.278-.109.5-.4.5-.787a.94.94 0 0 0-.2-.583l-4.523-5.755a2 2 0 0 1-.428-1.235c0-6.554-4.847-12.359-11.334-14.279c.016.925.027 2.011.027 3.268c0 .933-.006 2.448-.015 3.442a8.837 8.837 0 0 1-1.71 15.59c2.481 2.156 5.631 3.469 8.559 3.469a2 2 0 1 1 0 4c-4.989 0-10.029-2.685-13.287-6.595a2 2 0 0 1-.292-.47a8.837 8.837 0 0 1-3.072-15.994a411 411 0 0 1-.016-3.442q.002-1.749.024-3.067C9.922 8.377 5.437 14.303 5.437 21.27c0 6.043 3.357 11.736 8.197 14.427a2 2 0 0 1 1.028 1.748v8.015a2 2 0 0 1-4 0v-6.884C5.075 34.963 1.437 28.277 1.437 21.27c0-9.5 6.658-17.44 15.561-19.433A3.4 3.4 0 0 1 19.411.532" clipRule="evenodd" />
+const CreditsEarnedIcon = ({ size = 20, className = '' }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" className={className}>
+        <path fill="currentColor" d="M2 4a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h20a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm7 6a1 1 0 1 0-2 0a1 1 0 0 0 2 0m2 0a3 3 0 1 1-6 0a3 3 0 0 1 6 0m-5.473 7.025l-1.414-1.414A5.5 5.5 0 0 1 8.003 14c1.518 0 2.894.617 3.888 1.61l-1.414 1.415A3.5 3.5 0 0 0 8.002 16c-.967 0-1.84.39-2.475 1.025m14.68-6.318l-4 4l-.707.707l-.707-.707l-2.5-2.5l1.414-1.414l1.793 1.793l3.293-3.293z" />
     </svg>
 );
 
-const ApprovedCheckIcon = ({ size = 20, className = '' }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" className={className}>
-        <path fill="currentColor" fillRule="evenodd" d="M10.586 2.1a2 2 0 0 1 2.7-.116l.128.117L15.314 4H18a2 2 0 0 1 1.994 1.85L20 6v2.686l1.9 1.9a2 2 0 0 1 .116 2.701l-.117.127l-1.9 1.9V18a2 2 0 0 1-1.85 1.995L18 20h-2.685l-1.9 1.9a2 2 0 0 1-2.701.116l-.127-.116l-1.9-1.9H6a2 2 0 0 1-1.995-1.85L4 18v-2.686l-1.9-1.9a2 2 0 0 1-.116-2.701l.116-.127l1.9-1.9V6a2 2 0 0 1 1.85-1.994L6 4h2.686z" className="duoicon-secondary-layer" opacity="0.3" /><path fill="currentColor" fillRule="evenodd" d="m15.079 8.983l-4.244 4.244l-1.768-1.768a1 1 0 1 0-1.414 1.415l2.404 2.404a1.1 1.1 0 0 0 1.556 0l4.88-4.881a1 1 0 0 0-1.414-1.414" className="duoicon-primary-layer" />
+const UpcomingExamsIcon = ({ size = 20, className = '' }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 256 256" className={className}>
+        <path fill="currentColor" d="M96 113.89L107.06 136H84.94ZM232 56v160a8 8 0 0 1-11.58 7.16L192 208.94l-28.42 14.22a8 8 0 0 1-7.16 0L128 208.94l-28.42 14.22a8 8 0 0 1-7.16 0L64 208.94l-28.42 14.22A8 8 0 0 1 24 216V56a16 16 0 0 1 16-16h176a16 16 0 0 1 16 16m-96.84 100.42l-32-64a8 8 0 0 0-14.32 0l-32 64a8 8 0 0 0 14.32 7.16L76.94 152h38.12l5.78 11.58a8 8 0 1 0 14.32-7.16M208 128a8 8 0 0 0-8-8h-16v-16a8 8 0 0 0-16 0v16h-16a8 8 0 0 0 0 16h16v16a8 8 0 0 0 16 0v-16h16a8 8 0 0 0 8-8" />
+    </svg>
+);
+
+const LibraryItemsIcon = ({ size = 20, className = '' }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 512 512" className={className}>
+        <path fill="currentColor" d="M64 480H48a32 32 0 0 1-32-32V112a32 32 0 0 1 32-32h16a32 32 0 0 1 32 32v336a32 32 0 0 1-32 32m176-304a32 32 0 0 0-32-32h-64a32 32 0 0 0-32 32v28a4 4 0 0 0 4 4h120a4 4 0 0 0 4-4ZM112 448a32 32 0 0 0 32 32h64a32 32 0 0 0 32-32v-30a2 2 0 0 0-2-2H114a2 2 0 0 0-2 2Z" /><rect width="128" height="144" x="112" y="240" fill="currentColor" rx="2" ry="2" /><path fill="currentColor" d="M320 480h-32a32 32 0 0 1-32-32V64a32 32 0 0 1 32-32h32a32 32 0 0 1 32 32v384a32 32 0 0 1-32 32m175.89-34.55l-32.23-340c-1.48-15.65-16.94-27-34.53-25.31l-31.85 3c-17.59 1.67-30.65 15.71-29.17 31.36l32.23 340c1.48 15.65 16.94 27 34.53 25.31l31.85-3c17.59-1.67 30.65-15.71-29.17-31.36" />
     </svg>
 );
 
@@ -95,24 +129,41 @@ const data = [
 
 const Dashboard: React.FC = () => {
     const [activeMenu, setActiveMenu] = useState('Dashboard');
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+    const closeSidebar = () => setIsSidebarOpen(false);
+
+    const handleMenuClick = (name: string) => {
+        setActiveMenu(name);
+        if (window.innerWidth <= 768) {
+            closeSidebar();
+        }
+    };
 
     const menuItems = [
         { name: 'Dashboard', icon: <DashboardIcon size={20} /> },
-        { name: 'Accounts', icon: <AccountsIcon size={20} /> },
-        { name: 'Applications', icon: <ApplicationsIcon size={20} /> },
-        { name: 'Faults&Maintenance', icon: <FaultsIcon size={20} /> },
+        { name: 'Student Profile', icon: <StudentProfileIcon size={20} /> },
+        { name: 'Academics', icon: <AcademicsIcon size={20} /> },
+        { name: 'My fees', icon: <FeesIcon size={20} /> },
         { name: 'Payments', icon: <PaymentsIcon size={20} /> },
+        { name: 'My Requests', icon: <MyRequestsIcon size={20} /> },
+        { name: 'Events', icon: <EventsIcon size={20} /> },
         { name: 'Settings', icon: <SettingsIcon size={20} /> },
     ];
 
     const renderContent = () => {
         switch (activeMenu) {
-            case 'Accounts':
-                return <Accounts />;
-            case 'Applications':
-                return <Applications />;
-            case 'Faults&Maintenance':
-                return <FaultsMaintenance />;
+            case 'Student Profile':
+                return <StudentProfile />;
+            case 'Academics':
+                return <Academics />;
+            case 'My fees':
+                return <MyFees />;
+            case 'My Requests':
+                return <div className="p-8 text-center"><h2>My Requests Section</h2><p>Coming Soon</p></div>;
+            case 'Events':
+                return <div className="p-8 text-center"><h2>Events Section</h2><p>Coming Soon</p></div>;
             case 'Payments':
                 return <Payments />;
             case 'Settings':
@@ -129,29 +180,29 @@ const Dashboard: React.FC = () => {
                                     <div className="stat-card">
                                         <div className="stat-icon"><TotalAccountsIcon size={48} /></div>
                                         <div className="stat-info">
-                                            <h3>Total App Accounts</h3>
-                                            <div className="stat-value">768</div>
+                                            <h3>Current GPA</h3>
+                                            <div className="stat-value">3.85</div>
                                         </div>
                                     </div>
                                     <div className="stat-card">
-                                        <div className="stat-icon"><ApprovedCustomersIcon size={48} /></div>
+                                        <div className="stat-icon"><CreditsEarnedIcon size={48} /></div>
                                         <div className="stat-info">
-                                            <h3>Total Approved Customers</h3>
-                                            <div className="stat-value">9768</div>
+                                            <h3>Credits Earned</h3>
+                                            <div className="stat-value">120/360</div>
                                         </div>
                                     </div>
                                     <div className="stat-card">
-                                        <div className="stat-icon"><FaultsIcon size={48} /></div>
+                                        <div className="stat-icon"><UpcomingExamsIcon size={48} /></div>
                                         <div className="stat-info">
-                                            <h3>Faults Reports</h3>
-                                            <div className="stat-value">45</div>
+                                            <h3>Upcoming Exams</h3>
+                                            <div className="stat-value">3</div>
                                         </div>
                                     </div>
                                     <div className="stat-card">
-                                        <div className="stat-icon"><ApprovedCheckIcon size={48} /></div>
+                                        <div className="stat-icon"><LibraryItemsIcon size={48} /></div>
                                         <div className="stat-info">
-                                            <h3>Total Approved Customers</h3>
-                                            <div className="stat-value">9768</div>
+                                            <h3>Library Items Due</h3>
+                                            <div className="stat-value">1</div>
                                         </div>
                                     </div>
                                 </div>
@@ -160,7 +211,7 @@ const Dashboard: React.FC = () => {
                                 <div className="charts-row">
                                     <div className="card">
                                         <div className="card-header">
-                                            <h3 className="card-title">Applications History</h3>
+                                            <h3 className="card-title">Grade Progress</h3>
                                             <button style={{
                                                 padding: '4px 12px',
                                                 border: '1px solid #ccc',
@@ -194,50 +245,50 @@ const Dashboard: React.FC = () => {
                                     </div>
 
                                     <div className="card">
-                                        <h3 className="card-title">Overall Applications</h3>
-                                        <h1 style={{ fontSize: '2rem', fontWeight: 700, margin: '1rem 0' }}>768</h1>
+                                        <h3 className="card-title">Attendance Rate</h3>
+                                        <h1 style={{ fontSize: '2rem', fontWeight: 700, margin: '1rem 0' }}>92%</h1>
                                         <div className="overall-bar">
                                             <div className="bar-segment" style={{ width: '5%', background: '#dc2626' }}></div>
-                                            <div className="bar-segment" style={{ width: '25%', background: '#f97316' }}></div>
-                                            <div className="bar-segment" style={{ width: '70%', background: '#22c55e' }}></div>
+                                            <div className="bar-segment" style={{ width: '15%', background: '#f97316' }}></div>
+                                            <div className="bar-segment" style={{ width: '80%', background: '#22c55e' }}></div>
                                         </div>
                                         <div className="legend">
                                             <div className="legend-item">
                                                 <div className="dot" style={{ background: '#dc2626' }}></div>
                                                 <div>
-                                                    <div style={{ fontWeight: 'bold' }}>10</div>
-                                                    <div style={{ color: '#666', fontSize: '0.7rem' }}>Rejected</div>
+                                                    <div style={{ fontWeight: 'bold' }}>5</div>
+                                                    <div style={{ color: '#666', fontSize: '0.7rem' }}>Absent</div>
                                                 </div>
                                             </div>
                                             <div className="legend-item">
                                                 <div className="dot" style={{ background: '#f97316' }}></div>
                                                 <div>
-                                                    <div style={{ fontWeight: 'bold' }}>99</div>
-                                                    <div style={{ color: '#666', fontSize: '0.7rem' }}>Reviewing</div>
+                                                    <div style={{ fontWeight: 'bold' }}>2</div>
+                                                    <div style={{ color: '#666', fontSize: '0.7rem' }}>Late</div>
                                                 </div>
                                             </div>
                                             <div className="legend-item">
                                                 <div className="dot" style={{ background: '#22c55e' }}></div>
                                                 <div>
-                                                    <div style={{ fontWeight: 'bold' }}>768</div>
-                                                    <div style={{ color: '#666', fontSize: '0.7rem' }}>Approved</div>
+                                                    <div style={{ fontWeight: 'bold' }}>45</div>
+                                                    <div style={{ color: '#666', fontSize: '0.7rem' }}>Present</div>
                                                 </div>
                                             </div>
                                         </div>
                                         <button
                                             className="payment-btn"
                                             style={{ marginTop: '2rem', background: '#A80000' }}
-                                            onClick={() => setActiveMenu('Applications')}
+                                            onClick={() => setActiveMenu('Academics')}
                                         >
-                                            Go to Applications
+                                            View Attendance Details
                                         </button>
                                     </div>
                                 </div>
 
-                                {/* Payments History */}
+                                {/* Grade History Summary */}
                                 <div className="card" style={{ height: '300px' }}>
-                                    <h3 className="card-title">Payments History</h3>
-                                    <p style={{ fontSize: '0.8rem', color: '#999', marginTop: '0.5rem' }}>A line graph showing historical payment statistics</p>
+                                    <h3 className="card-title">Semester Performance Trend</h3>
+                                    <p style={{ fontSize: '0.8rem', color: '#999', marginTop: '0.5rem' }}>A line graph showing your GPA progress over semesters</p>
                                 </div>
                             </div>
 
@@ -245,30 +296,30 @@ const Dashboard: React.FC = () => {
                             <div className="right-panel">
                                 {/* Wrapper Card for Amounts */}
                                 <div className="card" style={{ padding: '1.5rem' }}>
-                                    <div className="red-card">
-                                        <h3>Total of Amounts Due</h3>
-                                        <p>Tenant Purchase Schemes</p>
-                                        <div className="amount">BWP100000.00</div>
+                                    <div className="summary-card-white">
+                                        <h3>Outstanding Tuition Balance</h3>
+                                        <p>Semester 1 2024</p>
+                                        <div className="amount">BWP 15,000.00</div>
                                     </div>
 
-                                    <div className="red-card">
-                                        <h3>Total of Amounts Due</h3>
-                                        <p>Rental Units</p>
-                                        <div className="amount">BWP100000.00</div>
+                                    <div className="summary-card-white">
+                                        <h3>Library Fines Due</h3>
+                                        <p>Overdue Items</p>
+                                        <div className="amount">BWP 50.00</div>
                                     </div>
 
                                     <button
                                         className="payment-btn"
-                                        onClick={() => setActiveMenu('Payments')}
+                                        onClick={() => setActiveMenu('My fees')}
                                     >
-                                        Go to Payments
+                                        Go to My Fees
                                     </button>
                                 </div>
 
-                                {/* Fault Reports History */}
+                                {/* Events/Deadlines */}
                                 <div className="card" style={{ height: '300px' }}>
-                                    <h3 className="card-title">Fault Reports History</h3>
-                                    <p style={{ fontSize: '0.8rem', color: '#999', marginTop: '0.5rem' }}>Line or Bar graph showing historical faults stats</p>
+                                    <h3 className="card-title">Upcoming Deadlines</h3>
+                                    <p style={{ fontSize: '0.8rem', color: '#999', marginTop: '0.5rem' }}>List of upcoming assignments and due dates</p>
                                 </div>
                             </div>
                         </div>
@@ -279,10 +330,18 @@ const Dashboard: React.FC = () => {
 
     return (
         <div className="dashboard-layout">
+            {/* Sidebar Overlay for Mobile */}
+            {isSidebarOpen && <div className="sidebar-overlay" onClick={closeSidebar}></div>}
+
             {/* Sidebar */}
-            <aside className="sidebar">
-                <div className="sidebar-logo">
-                    <img src={logo} alt="BHC Logo" className="logo-img" />
+            <aside className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
+                <div className="sidebar-header">
+                    <div className="sidebar-logo">
+                        <img src={logo} alt="BHC Logo" className="logo-img" />
+                    </div>
+                    <button className="sidebar-close" onClick={closeSidebar}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
                 </div>
 
                 <div className="menu-label">MENU</div>
@@ -292,7 +351,7 @@ const Dashboard: React.FC = () => {
                         <div
                             key={item.name}
                             className={`nav-item ${activeMenu === item.name ? 'active' : ''}`}
-                            onClick={() => setActiveMenu(item.name)}
+                            onClick={() => handleMenuClick(item.name)}
                         >
                             <span className="nav-icon">{item.icon}</span>
                             {item.name}
@@ -305,10 +364,13 @@ const Dashboard: React.FC = () => {
             <main className="main-content">
                 {/* Header */}
                 <header className="header">
-                    {!['Accounts', 'Applications', 'Faults&Maintenance', 'Settings', 'Payments'].includes(activeMenu) ? (
+                    <button className="menu-toggle" onClick={toggleSidebar}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    </button>
+                    {!['Student Profile', 'Academics', 'My fees', 'Payments', 'My Requests', 'Events', 'Settings'].includes(activeMenu) ? (
                         <>
                             <h1 className="header-title">
-                                {activeMenu === 'Faults&Maintenance' ? 'Faults & Maintenance' : activeMenu}
+                                {activeMenu}
                             </h1>
 
                             <div className="search-bar">
@@ -327,8 +389,8 @@ const Dashboard: React.FC = () => {
                         <div className="user-profile">
                             <div className="avatar">A</div>
                             <div className="user-info">
-                                <span className="user-name">Amogelang</span>
-                                <span className="user-role">Admin</span>
+                                <span className="user-name">Amogelang Thalefang</span>
+                                <span className="user-role">Student</span>
                             </div>
                         </div>
                     </div>

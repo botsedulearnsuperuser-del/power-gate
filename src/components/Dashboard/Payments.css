@@ -1,120 +1,278 @@
 .payments-container {
     padding: 2rem;
-    padding-top: 4rem;
-    /* Matching spacing */
-    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .page-header {
-    display: flex;
-    align-items: center;
     margin-bottom: 2rem;
-    gap: 2rem;
 }
 
 .page-title {
-    font-size: 1.5rem;
-    font-weight: 700;
+    margin: 0;
+    font-size: 1.8rem;
     color: #333;
-    margin-right: auto;
 }
 
-.header-actions {
-    display: flex;
-    align-items: center;
+.page-subtitle {
+    margin: 0.5rem 0 0;
+    color: #666;
+}
+
+.payments-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Category Selector */
+.category-selector {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
 
-/* Reusing similar button styles but keeping local scope or could refactor global later */
-.search-bar-alt {
+.category-item {
     display: flex;
     align-items: center;
-    background: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
-    padding: 0.5rem 1rem;
-    width: 280px;
-}
-
-.filter-btn {
-    background: white;
-    border: 1px solid #A80000;
-    color: #A80000;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    font-weight: 600;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 12px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    transition: all 0.2s;
 }
 
-.action-btn-red {
+.category-item:hover {
+    border-color: #A80000;
+    background: #fffafa;
+}
+
+.category-item.active {
+    border-color: #A80000;
+    background: #fff5f5;
+    box-shadow: 0 2px 8px rgba(168, 0, 0, 0.1);
+}
+
+.cat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #fdfdfd;
+    border-radius: 10px;
+    color: #A80000;
+    transition: all 0.2s;
+}
+
+.category-item.active .cat-icon {
+    background: #A80000;
+    color: white;
+}
+
+.cat-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Input Styles */
+input[type="number"] {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="number"]:focus {
+    border-color: #A80000;
+}
+
+/* Upload Zone */
+.upload-zone {
+    border: 2px dashed #ddd;
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #999;
+}
+
+.upload-zone:hover {
+    border-color: #A80000;
+    color: #A80000;
+    background: #fffafa;
+}
+
+.upload-zone.has-file {
+    border-color: #22c55e;
+    background: #f0fdf4;
+    color: #22c55e;
+}
+
+.file-name {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.submit-payment-btn {
+    width: 100%;
+    padding: 1.25rem;
     background: #A80000;
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-/* Table Styles */
-.payments-table-container {
-    background: #fcebeb;
-    /* Light pink */
-    border-radius: 8px;
-    padding: 1rem;
-}
-
-.payments-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.payments-table th {
-    text-align: left;
-    font-size: 0.75rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
     font-weight: 700;
-    color: #666;
-    text-transform: uppercase;
-    padding: 1rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: opacity 0.2s;
 }
 
-.payments-table td {
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: #555;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    vertical-align: middle;
+.submit-payment-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
 }
 
-.account-type-text {
-    font-weight: 800;
-    color: #A80000;
-    /* Red Bold as in image */
-}
-
-.amount-text,
-.date-text,
-.balance-text {
-    font-weight: 600;
-    color: #666;
+.submit-payment-btn:not(:disabled):hover {
     opacity: 0.9;
 }
 
-.status-btn {
-    background-color: #990000;
+/* Sidebar Cards */
+.payment-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.banking-details-card {
+    background: #fdfdfd;
+    border-top: 4px solid #A80000;
+}
+
+.bank-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.bank-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.bank-item .label {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.bank-item .value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.red-text {
+    color: #A80000 !important;
+}
+
+.instructions-list {
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.instructions-list li {
+    margin-bottom: 1rem;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Success View */
+.success-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+.success-card {
+    text-align: center;
+    max-width: 500px;
+}
+
+.success-card h2 {
+    margin: 1.5rem 0 1rem;
+    font-size: 1.8rem;
+}
+
+.back-btn {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: #333;
     color: white;
-    padding: 6px 16px;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 0.85rem;
     border: none;
+    border-radius: 10px;
+    font-weight: 600;
     cursor: pointer;
-    display: inline-block;
+}
+
+@media (max-width: 1024px) {
+    .payments-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-sidebar {
+        order: -1;
+        /* Banking details first on tablet/mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .payments-container {
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 1.5rem 1rem;
+    }
+
+    .category-selector {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+    }
 }

@@ -1,8 +1,14 @@
 .accounts-container {
     padding: 2rem;
     padding-top: 4rem;
-    /* Extra top spacing as requested */
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .accounts-container {
+        padding: 1rem;
+        padding-top: 2rem;
+    }
 }
 
 .page-header {
@@ -23,6 +29,29 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .header-actions {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .search-bar-alt {
+        width: 100%;
+    }
+
+    .filter-btn,
+    .action-btn-red {
+        flex: 1;
+        justify-content: center;
+    }
 }
 
 .search-bar-alt {
@@ -63,14 +92,17 @@
 
 .accounts-table-container {
     background: #fcebeb;
-    /* Light pinkish bg from image */
     border-radius: 8px;
     padding: 1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .accounts-table {
     width: 100%;
     border-collapse: collapse;
+    min-width: 800px;
+    /* Force scroll on mobile */
 }
 
 .accounts-table th {
