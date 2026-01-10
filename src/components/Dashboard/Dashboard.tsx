@@ -6,9 +6,6 @@ import logo from '../../assets/BHC LOGO (2).png';
 
 import { Search } from 'lucide-react';
 import { BarChart, Bar, XAxis, ResponsiveContainer, Cell } from 'recharts';
-import Accounts from './Accounts';
-import Applications from './Applications';
-import FaultsMaintenance from './FaultsMaintenance';
 import Settings from './Settings';
 import Payments from './Payments';
 import StudentProfile from './StudentProfile';
@@ -26,26 +23,6 @@ const NotificationIcon = ({ size = 20, className = '' }) => (
 const DashboardIcon = ({ size = 20, className = '' }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 16 16" className={className}>
         <path fill="currentColor" d="M2 4.5A2.5 2.5 0 0 1 4.5 2h7A2.5 2.5 0 0 1 14 4.5V6H3v5.5A1.5 1.5 0 0 0 4.5 13H6v1H4.5A2.5 2.5 0 0 1 2 11.5zM12.75 7A1.75 1.75 0 0 0 11 8.75V11H8.75A1.75 1.75 0 0 0 7 12.75v1.5c0 .966.784 1.75 1.75 1.75H14a2 2 0 0 0 2-2V8.75A1.75 1.75 0 0 0 14.25 7zM11 12v3H8.75a.75.75 0 0 1-.75-.75v-1.5a.75.75 0 0 1 .75-.75zm1 3v-3h3v2a1 1 0 0 1-1 1zm0-4V8.75a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 .75.75V11z" />
-    </svg>
-);
-
-const AccountsIcon = ({ size = 20, className = '' }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" className={className}>
-        <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
-            <path d="M2 12c0-3.771 0-5.657 1.172-6.828S6.229 4 10 4h4c3.771 0 5.657 0 6.828 1.172S22 8.229 22 12s0 5.657-1.172 6.828S17.771 20 14 20h-4c-3.771 0-5.657 0-6.828-1.172S2 15.771 2 12" /><path d="M9 12.5a2.5 2.5 0 1 1 0-5a2.5 2.5 0 0 1 0 5m0 0a4 4 0 0 1 4 4m-4-4a4 4 0 0 0-4 4M15 9h4m-4 3h4" />
-        </g>
-    </svg>
-);
-
-const ApplicationsIcon = ({ size = 20, className = '' }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" className={className}>
-        <path fill="currentColor" d="m11 20.1l8.2-8.2c.5-.5 1.1-.8 1.8-.8s1.3.3 1.8.8l.2.2V4c0-1.1-.9-2-2-2H3c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h8zM3 4h18v3H3zm18 9.1c-.1 0-.3.1-.4.2l-1 1l2.1 2.1l1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8l-6.1 6V23h2.1l6.1-6.1z" />
-    </svg>
-);
-
-const FaultsIcon = ({ size = 20, className = '' }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" className={className}>
-        <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 15v3a1 1 0 0 0 1 1h4v-4m-5 0v-4m0 4h5m-5-4V6a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v1.99M3 11h5v4m9.47 4.172l-.869-1.439l-2.816-.235l-2.573-4.257l1.487-2.836l1.444 2.389a1.353 1.353 0 1 0 2.316-1.4l-1.444-2.39h3.136l2.61 4.278l-1.072 2.585l.87 1.438" />
     </svg>
 );
 
@@ -78,7 +55,7 @@ const StudentProfileIcon = ({ size = 20, className = '' }) => (
 
 const FeesIcon = ({ size = 20, className = '' }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" y2="22" y1="10" y2="10" /><path d="M12 14v4" /><path d="M8 14v4" /><path d="M16 14v4" />
+        <rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" x2="22" y1="10" y2="10" /><path d="M12 14v4" /><path d="M8 14v4" /><path d="M16 14v4" />
     </svg>
 );
 
