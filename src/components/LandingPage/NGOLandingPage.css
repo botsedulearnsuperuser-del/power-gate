@@ -109,6 +109,10 @@ button:active {
   list-style: none;
 }
 
+.menu-toggle {
+  display: none !important;
+}
+
 .mobile-cta {
   display: none;
 }
