@@ -1,5 +1,4 @@
-import React from 'react';
-import { Play, ArrowRight, Instagram, Twitter, Facebook, Youtube } from 'lucide-react';
+import { Play, Instagram, Twitter, Facebook, Youtube } from 'lucide-react';
 
 const HEALandingPage = () => {
     return (

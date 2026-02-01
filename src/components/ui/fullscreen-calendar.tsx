@@ -19,8 +19,6 @@ import {
 import {
     ChevronLeftIcon,
     ChevronRightIcon,
-    PlusCircleIcon,
-    SearchIcon,
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
