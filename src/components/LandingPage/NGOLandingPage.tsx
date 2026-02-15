@@ -1,5 +1,4 @@
-import React from 'react';
-import { Heart, ArrowRight, Check, ChevronLeft, ChevronRight, Facebook, Twitter, Instagram, Youtube, User, Calendar, Mail, MapPin, Phone } from 'lucide-react';
+import { Heart, Check, ChevronLeft, ChevronRight, Facebook, Twitter, Instagram, Youtube, User, Calendar } from 'lucide-react';
 import './NGOLandingPage.css';
 
 const NGOLandingPage = () => {
