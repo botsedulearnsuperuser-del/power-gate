@@ -1,10 +1,10 @@
-import NGOLandingPage from './components/LandingPage/NGOLandingPage';
+import KindergartenLandingPage from './components/Kindergarten/KindergartenLandingPage';
 import './App.css';
 
 function App() {
   return (
     <div className="app-container">
-      <NGOLandingPage />
+      <KindergartenLandingPage />
     </div>
   );
 }
