@@ -218,19 +218,59 @@
 }
 
 @media (max-width: 768px) {
+    .popup-overlay {
+        padding: 10px;
+    }
+
+    .popup-container {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
     .product-popup {
         grid-template-columns: 1fr;
+        min-height: auto;
     }
 
     .popup-slider {
-        height: 250px;
+        height: 200px;
+    }
+
+    .popup-info {
+        padding: 30px 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .popup-info h2 {
+        font-size: 24px;
+    }
+
+    .popup-close {
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .enquiry-popup {
+        padding: 30px 20px;
+    }
+
+    .enquiry-popup h2 {
+        font-size: 22px;
     }
 
     .enquiry-form {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .enquiry-group.full {
         grid-column: span 1;
+    }
+
+    .enquiry-submit {
+        padding: 12px;
     }
 }

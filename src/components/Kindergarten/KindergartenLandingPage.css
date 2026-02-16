@@ -1006,22 +1006,31 @@
 @media (max-width: 992px) {
   .hero-container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
 
   .hero-boxes {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 30px;
+    display: flex;
     flex-direction: row;
     overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 15px;
+    scrollbar-width: none;
+  }
+
+  .hero-boxes::-webkit-scrollbar {
+    display: none;
   }
 
   .hero-box {
-    flex: 1;
-    min-width: 200px;
-    text-align: left;
+    flex: 0 0 220px;
+    padding: 15px;
+    text-align: center;
     border-right: none;
-    border-bottom: 5px solid transparent;
+    border-bottom: 4px solid transparent;
   }
 
   .hero-box.active,
@@ -1034,20 +1043,36 @@
     display: none;
   }
 
+  .hero-content {
+    padding-left: 0;
+    text-align: center;
+  }
+
   .hero-content h1 {
-    font-size: 42px;
+    font-size: 32px;
+  }
+
+  .hero-content h1 span {
+    display: block;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    margin: 0 auto;
   }
 
   .stats-grid,
   .industries-grid,
   .reach-grid {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 40px;
   }
 
   .excellence-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 30px;
   }
 
   .shorts-grid {
@@ -1060,12 +1085,12 @@
 
   .footer-links-grid {
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 30px;
   }
 
   .contact-details {
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
 
   .reach-right,
@@ -1078,10 +1103,65 @@
     max-width: 100%;
   }
 
-
   .footer-top {
     flex-direction: column;
-    gap: 60px;
+    gap: 40px;
+  }
+
+  .history-content h2 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: auto;
+    padding: 0;
+    /* Remove padding to eliminate gap with navbar */
+  }
+
+  .hero-slide {
+    padding: 60px 0;
+    /* Move padding here to keep space around content but keep bg at top */
+  }
+
+  .hero-container {
+    padding: 0 15px;
+  }
+
+  .hero-boxes {
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .hero-box {
+    text-align: center;
+    border-right: none;
+    border-bottom: 4px solid transparent;
+    padding: 20px 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .section-header h2,
+  .section-title,
+  .stats-content h2,
+  .reach-left h2,
+  .help-header h3 {
+    font-size: 26px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .help-grid {
+    grid-template-columns: 1fr;
   }
 }
 

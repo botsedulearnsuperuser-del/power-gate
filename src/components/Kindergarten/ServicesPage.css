@@ -243,6 +243,45 @@
     }
 
     .services-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .services-hero {
+        padding: 80px 0;
+    }
+
+    .services-hero h1 {
+        font-size: 32px;
+    }
+
+    .services-list-section {
+        padding: 60px 0;
+    }
+
+    .service-image {
+        height: 150px;
+    }
+
+    .service-content {
+        padding: 30px 20px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-hero h1 {
+        font-size: 28px;
+    }
+
+    .services-intro h2 {
+        font-size: 26px;
+    }
+
+    .service-action-banner {
+        padding: 60px 0;
+    }
+
+    .action-text h2 {
+        font-size: 24px;
     }
 }

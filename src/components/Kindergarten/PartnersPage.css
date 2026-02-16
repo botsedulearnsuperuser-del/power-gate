@@ -238,4 +238,24 @@
     .partners-grid {
         grid-template-columns: 1fr;
     }
+
+    .partners-hero {
+        padding: 80px 0;
+    }
+
+    .partners-hero h1 {
+        font-size: 32px;
+    }
+
+    .partner-content-wrapper h3 {
+        font-size: 26px;
+    }
+
+    .global-partnership {
+        padding: 50px 0;
+    }
+
+    .global-content h2 {
+        font-size: 28px;
+    }
 }

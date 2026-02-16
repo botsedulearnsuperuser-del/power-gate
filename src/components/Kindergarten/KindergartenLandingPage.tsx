@@ -65,26 +65,6 @@ const ManufacturingLandingPage: React.FC = () => {
               </div>
             </div>
           </div>
-
-          <button className="hero-arrow left">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 15 15">
-              <path fill="currentColor" d="M6 .5V2h2.5c.5 0 .5.5.5.5v10s0 .5-.5.5H6v1.5c0 .5-3 .5-3 0V13H.5c-.5 0-.5-.5-.5-.5v-10S0 2 .5 2H3V.5C3 0 6 0 6 .5M4.5 4C2.5 4 1 5.5 1 7.5S2.5 11 4.5 11S8 9.5 8 7.5S6.5 4 4.5 4" />
-              <path fill="currentColor" d="M3 9h3c.5 0 .5 1 0 1H3c-.5 0-.5-1 0-1m-.5-3.5c-.25.25 1.1 1.6 1.1 1.6s-.1.2-.1.4c0 .5.38 1 1 1c.63 0 1-.5 1-1s-.37-1-1-1c-.3 0-.4.1-.4.1S2.75 5.25 2.5 5.5m9-3.5L10 8h2l-1 5l4-7h-2l1.5-4z" />
-            </svg>
-          </button>
-          <button className="hero-arrow right">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 15 15">
-              <path fill="currentColor" d="M9 .5V1h3.5c.5 0 .5.5.5.5v12s0 .5-.5.5H9v.5c0 .5-3 .5-3 0V14H2.5c-.5 0-.5-.5-.5-.5v-12s0-.5.5-.5H6V.5C6 0 9 0 9 .5M7.5 3C5 3 3 5 3 7.5S5 12 7.5 12S12 10 12 7.5S10 3 7.5 3" />
-              <path fill="currentColor" d="m6.5 4l-1 4H7l-1 3.5L10 7H8l1-3z" />
-            </svg>
-          </button>
-
-          <div className="hero-pagination">
-            <span className="dot active"></span>
-            <span className="dot"></span>
-            <span className="dot"></span>
-            <span className="dot"></span>
-          </div>
         </div>
       </section>
 
@@ -146,10 +126,10 @@ const ManufacturingLandingPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Wire Drawn Stats Section */}
-      <section className="stats-section">
+      < section className="stats-section" >
         <div className="container">
           <div className="stats-grid">
             <div className="stats-image">
@@ -161,10 +141,10 @@ const ManufacturingLandingPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Product Info Section */}
-      <section className="product-info-section">
+      < section className="product-info-section" >
         <div className="container">
           <div className="section-header">
             <h2>PRODUCT INFORMATION</h2>
@@ -194,10 +174,10 @@ const ManufacturingLandingPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Experience Excellence Section */}
-      <section className="excellence-section">
+      < section className="excellence-section" >
         <div className="container">
           <h2 className="section-title">EXPERIENCE OUR SERVICE</h2>
           <div className="excellence-grid">
@@ -234,10 +214,10 @@ const ManufacturingLandingPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Industries Support Section */}
-      <section className="industries-section">
+      < section className="industries-section" >
         <div className="container">
           <h2 className="section-title">INDUSTRIER WE SUPPORT</h2>
           <div className="industries-grid">
@@ -302,10 +282,10 @@ const ManufacturingLandingPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Reach Us Out Section */}
-      <section className="reach-section">
+      < section className="reach-section" >
         <div className="container">
           <div className="reach-grid">
             <div className="reach-left">
@@ -338,10 +318,10 @@ const ManufacturingLandingPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Clients Section */}
-      <section className="clients-section">
+      < section className="clients-section" >
         <div className="container">
           <div className="clients-grid">
             <img src="/clientslogos/07469669-d940-4905-83d2-4b89dc9d9dc1.png" alt="Client Logo" />
@@ -355,19 +335,19 @@ const ManufacturingLandingPage: React.FC = () => {
             <img src="/clientslogos/efbf9ee2-beff-4395-9492-cd65a13fe3f2.png" alt="Client Logo" />
           </div>
         </div>
-      </section>
+      </section >
 
       {/* History Section */}
-      <section className="history-section" style={{ backgroundImage: "linear-gradient(rgba(168, 0, 0, 0.4), rgba(168, 0, 0, 0.4)), url('/clientslogos/team-powergate.jpeg')" }}>
+      < section className="history-section" style={{ backgroundImage: "linear-gradient(rgba(168, 0, 0, 0.4), rgba(168, 0, 0, 0.4)), url('/clientslogos/team-powergate.jpeg')" }}>
         <div className="container history-content">
           <p>OUR JOURNEY</p>
           <h2>Since 1993</h2>
           <button className="journey-btn">Learn More <ArrowRight size={16} /></button>
         </div>
-      </section>
+      </section >
 
       {/* Short Reads Section */}
-      <section className="shorts-section">
+      < section className="shorts-section" >
         <div className="container">
           <h3>Short Reads</h3>
           <div className="shorts-grid">
@@ -385,10 +365,10 @@ const ManufacturingLandingPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Need Help Section */}
-      <section className="help-section">
+      < section className="help-section" >
         <div className="container">
           <div className="help-header">
             <h3>Need Help</h3>
@@ -421,10 +401,10 @@ const ManufacturingLandingPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Footer */}
-      <footer className="footer">
+      < footer className="footer" >
         <div className="container">
           <div className="footer-top">
             <div className="footer-brand">
@@ -467,8 +447,8 @@ const ManufacturingLandingPage: React.FC = () => {
             </p>
           </div>
         </div>
-      </footer>
-    </div>
+      </footer >
+    </div >
   );
 };
 
