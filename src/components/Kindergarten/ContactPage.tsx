@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Send } from 'lucide-react';
 import './ContactPage.css';
 
 const ContactPage: React.FC = () => {
