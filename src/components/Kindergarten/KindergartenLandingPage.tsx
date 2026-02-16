@@ -1,9 +1,7 @@
 import React from 'react';
 import './KindergartenLandingPage.css';
 import {
-  ArrowRight,
-  ChevronLeft,
-  ChevronRight
+  ArrowRight
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -65,8 +63,18 @@ const ManufacturingLandingPage: React.FC = () => {
             </div>
           </div>
 
-          <button className="hero-arrow left"><ChevronLeft size={32} /></button>
-          <button className="hero-arrow right"><ChevronRight size={32} /></button>
+          <button className="hero-arrow left">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 15 15">
+              <path fill="currentColor" d="M6 .5V2h2.5c.5 0 .5.5.5.5v10s0 .5-.5.5H6v1.5c0 .5-3 .5-3 0V13H.5c-.5 0-.5-.5-.5-.5v-10S0 2 .5 2H3V.5C3 0 6 0 6 .5M4.5 4C2.5 4 1 5.5 1 7.5S2.5 11 4.5 11S8 9.5 8 7.5S6.5 4 4.5 4" />
+              <path fill="currentColor" d="M3 9h3c.5 0 .5 1 0 1H3c-.5 0-.5-1 0-1m-.5-3.5c-.25.25 1.1 1.6 1.1 1.6s-.1.2-.1.4c0 .5.38 1 1 1c.63 0 1-.5 1-1s-.37-1-1-1c-.3 0-.4.1-.4.1S2.75 5.25 2.5 5.5m9-3.5L10 8h2l-1 5l4-7h-2l1.5-4z" />
+            </svg>
+          </button>
+          <button className="hero-arrow right">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 15 15">
+              <path fill="currentColor" d="M9 .5V1h3.5c.5 0 .5.5.5.5v12s0 .5-.5.5H9v.5c0 .5-3 .5-3 0V14H2.5c-.5 0-.5-.5-.5-.5v-12s0-.5.5-.5H6V.5C6 0 9 0 9 .5M7.5 3C5 3 3 5 3 7.5S5 12 7.5 12S12 10 12 7.5S10 3 7.5 3" />
+              <path fill="currentColor" d="m6.5 4l-1 4H7l-1 3.5L10 7H8l1-3z" />
+            </svg>
+          </button>
 
           <div className="hero-pagination">
             <span className="dot active"></span>
