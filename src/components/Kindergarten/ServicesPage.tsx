@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Droplets } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { usePopups } from '../Popups/PopupContext';
 import './ServicesPage.css';
 
