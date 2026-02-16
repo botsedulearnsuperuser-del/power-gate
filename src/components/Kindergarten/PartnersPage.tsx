@@ -14,9 +14,9 @@ const PartnersPage: React.FC = () => {
         },
         {
             id: 2,
-            name: 'CENTURION SYSTEMS',
+            name: 'TRRC',
             img: '/assets/services/logo (5) (1).png',
-            description: 'Partnering in world-class gate automation and access control systems, providing security and convenience to our residential and commercial clients. Centurion Systems is the benchmark for security and automation technology in the Southern African region.'
+            description: 'Strategic partnership with TRRC to deliver high-quality technical solutions and innovative engineering services. Together, we focus on enhancing regional infrastructure through specialized expertise and advanced technological integration.'
         }
     ];
 

@@ -18,9 +18,9 @@ const Navbar: React.FC = () => {
         <header className="header">
             <div className="container nav-container">
                 <div className="nav-left">
-                    <Link to="/" className="logo" onClick={closeMenu} style={{ textDecoration: 'none' }}>
-                        <img src="/assets/kindergatern/0d11235e-1d22-4c93-9aa1-6b0d4e69a8c8.png" alt="Powergate Logo" />
-                        <span className="logo-tagline">Electrical/Mechanical & ICT</span>
+                    <Link to="/" className="logo-container" onClick={closeMenu}>
+                        <img src="/assets/kindergatern/0d11235e-1d22-4c93-9aa1-6b0d4e69a8c8.png" alt="Powergate Logo" className="navbar-logo" />
+                        <span className="navbar-tagline">Electrical/Mechanical & ICT</span>
                     </Link>
                 </div>
 

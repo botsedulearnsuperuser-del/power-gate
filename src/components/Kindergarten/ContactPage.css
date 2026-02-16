@@ -232,6 +232,10 @@
         font-size: 26px;
     }
 
+    .section-title p {
+        font-size: 14px;
+    }
+
     .info-card {
         padding: 30px;
         gap: 25px;

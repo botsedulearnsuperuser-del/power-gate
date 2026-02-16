@@ -191,7 +191,7 @@ const ManufacturingLandingPage: React.FC = () => {
       {/* Industries Support Section */}
       <section className="industries-section">
         <div className="container">
-          <h2 className="section-title">INDUSTRIER WE SUPPORT</h2>
+          <h2 className="section-title">POWERGATE INDUSTRIAL SUPPORT</h2>
           <div className="industries-grid">
             <div className="industries-left">
               <div className="industries-text">

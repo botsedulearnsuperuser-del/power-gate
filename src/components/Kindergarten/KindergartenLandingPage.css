@@ -1024,6 +1024,8 @@
   .hero-slide {
     padding: 60px 0;
     /* Move padding here to keep space around content but keep bg at top */
+    background-position: 25% center;
+    /* Show more of the left side */
   }
 
   .hero-container {
@@ -1059,6 +1061,28 @@
 
   .product-grid {
     grid-template-columns: 1fr;
+  }
+
+  .industries-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .industries-text {
+    padding: 0;
+  }
+
+  .industries-list {
+    grid-template-columns: 1fr;
+  }
+
+  .industries-slideshow-container {
+    height: 300px;
+    box-shadow: 10px 10px 0 var(--bg-gray);
+  }
+
+  .industries-slide {
+    min-height: 300px;
   }
 
   .help-grid {
