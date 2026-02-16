@@ -1,0 +1,248 @@
+.services-page {
+    background: var(--white);
+}
+
+/* Services Hero */
+.services-hero {
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+}
+
+.services-hero h1 {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    text-transform: none;
+    letter-spacing: -1px;
+}
+
+.services-hero h1 span {
+    font-size: 0.6em;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.services-hero p {
+    font-size: 18px;
+    opacity: 0.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Intro */
+.services-intro {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services-intro h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--dark-text);
+    margin-bottom: 15px;
+}
+
+.services-intro p {
+    font-size: 16px;
+    color: var(--light-text);
+    line-height: 1.7;
+}
+
+/* Services List Section */
+.services-list-section {
+    padding: 100px 0;
+    background: var(--bg-gray);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.service-card {
+    background: var(--white);
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.service-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.1);
+}
+
+.service-icon-float {
+    position: absolute;
+    bottom: -20px;
+    right: 30px;
+    background: var(--maroon);
+    color: var(--white);
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(168, 0, 0, 0.3);
+}
+
+.service-content {
+    padding: 40px 30px 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-content h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--dark-text);
+}
+
+.service-content p {
+    font-size: 14px;
+    color: var(--light-text);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.service-features {
+    list-style: none;
+    margin-bottom: 30px;
+    margin-top: auto;
+}
+
+.service-features li {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--dark-text);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-features li svg {
+    color: var(--maroon);
+}
+
+.service-learn-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: var(--maroon);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0;
+    transition: gap 0.3s;
+}
+
+.service-learn-btn:hover {
+    gap: 12px;
+}
+
+/* Action Banner */
+.service-action-banner {
+    background: var(--dark-text);
+    padding: 80px 0;
+    color: var(--white);
+}
+
+.action-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.action-text h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.action-text p {
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.action-btn {
+    text-decoration: none;
+    background: var(--maroon);
+    color: var(--white);
+    padding: 16px 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+}
+
+.action-btn:hover {
+    background: var(--white);
+    color: var(--maroon);
+    transform: translateY(-2px);
+}
+
+.featured-service-bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.featured-card-centered {
+    width: 100%;
+    max-width: 400px;
+    /* Matching the grid item width essentially */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .action-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
