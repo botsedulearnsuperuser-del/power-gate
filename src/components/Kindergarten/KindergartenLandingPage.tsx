@@ -1,42 +1,14 @@
 import React from 'react';
 import './KindergartenLandingPage.css';
-import {
-  ArrowRight
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { usePopups } from '../Popups/PopupContext';
+import Navbar from '../Common/Navbar';
 
 const ManufacturingLandingPage: React.FC = () => {
-  const { openEnquiry } = usePopups();
-
   return (
     <div className="manufacturing-page">
-      {/* Top Navbar */}
-      <header className="header">
-        <div className="container nav-container">
-          <div className="nav-left">
-            <Link to="/" className="logo" style={{ textDecoration: 'none' }}>
-              <img src="/assets/kindergatern/0d11235e-1d22-4c93-9aa1-6b0d4e69a8c8.png" alt="Powergate Logo" />
-              <span className="logo-tagline">Electrical/Mechanical & ICT</span>
-            </Link>
-          </div>
-
-          <nav className="nav-center">
-            <ul className="nav-links">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/products">Products</Link></li>
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="/partners">Our Partners</Link></li>
-              <li><a href="#">News</a></li>
-              <li><Link to="/contact">Contact Us</Link></li>
-            </ul>
-          </nav>
-
-          <div className="nav-right">
-            <button className="enquire-btn" onClick={openEnquiry}>Enquire</button>
-          </div>
-        </div>
-      </header> {/* End Header */}
+      <Navbar />
+      {/* Hero Section */}
 
       {/* Hero Section */}
       <section className="hero">
@@ -126,10 +98,10 @@ const ManufacturingLandingPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Wire Drawn Stats Section */}
-      < section className="stats-section" >
+      <section className="stats-section">
         <div className="container">
           <div className="stats-grid">
             <div className="stats-image">
@@ -141,10 +113,10 @@ const ManufacturingLandingPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Product Info Section */}
-      < section className="product-info-section" >
+      <section className="product-info-section">
         <div className="container">
           <div className="section-header">
             <h2>PRODUCT INFORMATION</h2>
@@ -174,10 +146,10 @@ const ManufacturingLandingPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Experience Excellence Section */}
-      < section className="excellence-section" >
+      <section className="excellence-section">
         <div className="container">
           <h2 className="section-title">EXPERIENCE OUR SERVICE</h2>
           <div className="excellence-grid">
@@ -214,10 +186,10 @@ const ManufacturingLandingPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Industries Support Section */}
-      < section className="industries-section" >
+      <section className="industries-section">
         <div className="container">
           <h2 className="section-title">INDUSTRIER WE SUPPORT</h2>
           <div className="industries-grid">
@@ -282,10 +254,10 @@ const ManufacturingLandingPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Reach Us Out Section */}
-      < section className="reach-section" >
+      <section className="reach-section">
         <div className="container">
           <div className="reach-grid">
             <div className="reach-left">
@@ -318,10 +290,10 @@ const ManufacturingLandingPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Clients Section */}
-      < section className="clients-section" >
+      <section className="clients-section">
         <div className="container">
           <div className="clients-grid">
             <img src="/clientslogos/07469669-d940-4905-83d2-4b89dc9d9dc1.png" alt="Client Logo" />
@@ -335,19 +307,19 @@ const ManufacturingLandingPage: React.FC = () => {
             <img src="/clientslogos/efbf9ee2-beff-4395-9492-cd65a13fe3f2.png" alt="Client Logo" />
           </div>
         </div>
-      </section >
+      </section>
 
       {/* History Section */}
-      < section className="history-section" style={{ backgroundImage: "linear-gradient(rgba(168, 0, 0, 0.4), rgba(168, 0, 0, 0.4)), url('/clientslogos/team-powergate.jpeg')" }}>
+      <section className="history-section" style={{ backgroundImage: "linear-gradient(rgba(168, 0, 0, 0.4), rgba(168, 0, 0, 0.4)), url('/clientslogos/team-powergate.jpeg')" }}>
         <div className="container history-content">
           <p>OUR JOURNEY</p>
           <h2>Since 1993</h2>
           <button className="journey-btn">Learn More <ArrowRight size={16} /></button>
         </div>
-      </section >
+      </section>
 
       {/* Short Reads Section */}
-      < section className="shorts-section" >
+      <section className="shorts-section">
         <div className="container">
           <h3>Short Reads</h3>
           <div className="shorts-grid">
@@ -365,10 +337,10 @@ const ManufacturingLandingPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Need Help Section */}
-      < section className="help-section" >
+      <section className="help-section">
         <div className="container">
           <div className="help-header">
             <h3>Need Help</h3>
@@ -401,10 +373,10 @@ const ManufacturingLandingPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Footer */}
-      < footer className="footer" >
+      <footer className="footer">
         <div className="container">
           <div className="footer-top">
             <div className="footer-brand">
@@ -447,8 +419,8 @@ const ManufacturingLandingPage: React.FC = () => {
             </p>
           </div>
         </div>
-      </footer >
-    </div >
+      </footer>
+    </div>
   );
 };
 

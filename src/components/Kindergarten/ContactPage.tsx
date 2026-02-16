@@ -1,39 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Send } from 'lucide-react';
-import { usePopups } from '../Popups/PopupContext';
+import { Link } from 'react-router-dom';
+import Navbar from '../Common/Navbar';
 import './ContactPage.css';
 
 const ContactPage: React.FC = () => {
-    const { openEnquiry } = usePopups();
     return (
         <div className="contact-page">
-            {/* Top Navbar */}
-            <header className="header">
-                <div className="container nav-container">
-                    <div className="nav-left">
-                        <Link to="/" className="logo" style={{ textDecoration: 'none' }}>
-                            <img src="/assets/kindergatern/0d11235e-1d22-4c93-9aa1-6b0d4e69a8c8.png" alt="Powergate Logo" />
-                            <span className="logo-tagline">Electrical/Mechanical & ICT</span>
-                        </Link>
-                    </div>
+            <Navbar />
 
-                    <nav className="nav-center">
-                        <ul className="nav-links">
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/products">Products</Link></li>
-                            <li><a href="#">Services</a></li>
-                            <li><Link to="/partners">Our Partners</Link></li>
-                            <li><a href="#">News</a></li>
-                            <li><Link to="/contact" className="active">Contact Us</Link></li>
-                        </ul>
-                    </nav>
-
-                    <div className="nav-right">
-                        <button className="enquire-btn" onClick={openEnquiry}>Enquire</button>
-                    </div>
-                </div>
-            </header>
+            {/* Hero Section */}
 
             {/* Hero Section */}
             <section className="contact-hero" style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/clientslogos/manatwork4.jpg')" }}>
