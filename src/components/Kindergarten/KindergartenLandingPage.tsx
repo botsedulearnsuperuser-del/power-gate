@@ -4,8 +4,11 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { usePopups } from '../Popups/PopupContext';
 
 const ManufacturingLandingPage: React.FC = () => {
+  const { openEnquiry } = usePopups();
+
   return (
     <div className="manufacturing-page">
       {/* Top Navbar */}
@@ -30,7 +33,7 @@ const ManufacturingLandingPage: React.FC = () => {
           </nav>
 
           <div className="nav-right">
-            <button className="enquire-btn">Enquire</button>
+            <button className="enquire-btn" onClick={openEnquiry}>Enquire</button>
           </div>
         </div>
       </header> {/* End Header */}

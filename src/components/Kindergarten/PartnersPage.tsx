@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { usePopups } from '../Popups/PopupContext';
 import './PartnersPage.css';
 
 const PartnersPage: React.FC = () => {
+    const { openEnquiry } = usePopups();
     const partners = [
         {
             id: 1,
@@ -43,7 +45,7 @@ const PartnersPage: React.FC = () => {
                     </nav>
 
                     <div className="nav-right">
-                        <button className="enquire-btn">Enquire</button>
+                        <button className="enquire-btn" onClick={openEnquiry}>Enquire</button>
                     </div>
                 </div>
             </header>

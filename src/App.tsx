@@ -4,21 +4,24 @@ import ProductsPage from './components/Kindergarten/ProductsPage';
 import PartnersPage from './components/Kindergarten/PartnersPage';
 import ContactPage from './components/Kindergarten/ContactPage';
 import ServicesPage from './components/Kindergarten/ServicesPage';
+import { PopupProvider } from './components/Popups/PopupContext';
 import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="app-container">
-        <Routes>
-          <Route path="/" element={<KindergartenLandingPage />} />
-          <Route path="/products" element={<ProductsPage />} />
-          <Route path="/partners" element={<PartnersPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-        </Routes>
-      </div>
-    </Router>
+    <PopupProvider>
+      <Router>
+        <div className="app-container">
+          <Routes>
+            <Route path="/" element={<KindergartenLandingPage />} />
+            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/partners" element={<PartnersPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+          </Routes>
+        </div>
+      </Router>
+    </PopupProvider>
   );
 }
 

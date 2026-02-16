@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Send } from 'lucide-react';
+import { usePopups } from '../Popups/PopupContext';
 import './ContactPage.css';
 
 const ContactPage: React.FC = () => {
+    const { openEnquiry } = usePopups();
     return (
         <div className="contact-page">
             {/* Top Navbar */}
@@ -28,7 +30,7 @@ const ContactPage: React.FC = () => {
                     </nav>
 
                     <div className="nav-right">
-                        <button className="enquire-btn">Enquire</button>
+                        <button className="enquire-btn" onClick={openEnquiry}>Enquire</button>
                     </div>
                 </div>
             </header>

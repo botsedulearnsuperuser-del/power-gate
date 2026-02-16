@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Droplets } from 'lucide-react';
+import { usePopups } from '../Popups/PopupContext';
 import './ServicesPage.css';
 
 const ServicesPage: React.FC = () => {
+    const { openEnquiry } = usePopups();
     const services = [
         {
             id: 1,
@@ -67,7 +69,7 @@ const ServicesPage: React.FC = () => {
                     </nav>
 
                     <div className="nav-right">
-                        <button className="enquire-btn">Enquire</button>
+                        <button className="enquire-btn" onClick={openEnquiry}>Enquire</button>
                     </div>
                 </div>
             </header>
